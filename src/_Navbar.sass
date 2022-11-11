@@ -1,0 +1,164 @@
+
+// Navbar
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.site-header
+  background-color: $primary
+  box-shadow: 0px 1px 0px rgb(219, 219, 219)
+  width: 100%
+
+.navbar-header .block:first-child img,
+.navbar-header .block:nth-child(2) img
+  height: 2.25rem
+
+.c-frm.responsive
+  border-radius: 0.5rem
+  font-size: 16px
+
+.c-btn.toggle
+  background-color: transparent
+  padding: 4px
+
+.wrap
+  padding-left: 1rem
+  padding-right: 1rem
+
+.navbar-header
+  align-items: center
+  display: flex
+  min-height: 3.5rem
+
+.search .navbar-header .block:first-child
+  display: none
+
+.navbar-header .block:first-child,
+.navbar-header .block:last-child
+  flex: 1 0
+
+.navbar-header .block:first-child > .block-item
+  align-content: stretch
+  align-items: stretch
+  display: flex
+  flex: 0 0 auto
+  justify-content: flex-start
+
+.navbar-header .block:last-child > .block-item
+  align-content: center
+  align-items: center
+  display: flex
+  justify-content: flex-end
+
+.content .h1
+  font-size: 16px
+  font-weight: 400
+  margin: 0px
+
+.home .search-bar,
+.single .search-bar,
+.archive .search-bar
+  display: none
+
+.single .navbar-collapse
+  display: none
+
+.navbar-nav
+  align-items: center
+  display: flex
+  min-height: 3.5rem
+
+.navbar-nav li
+  margin-left: 0.75rem
+
+.navbar-nav li:first-child
+  margin-left: 0
+
+.navbar-nav li a
+  color: $primary-text
+
+.navbar-nav li a:hover
+  color: rgb(0, 0, 0)
+
+@media (min-width: $screen-lg)
+  .search .site-header .wrap
+    justify-content: center
+  .wrap
+    align-items: center
+    display: flex
+    margin: 0 auto
+    max-width: 72rem
+    padding-left: 1.5rem
+    padding-right: 1.5rem
+
+@media (min-width: $screen-lg)
+  .home .search-bar,
+  .single .search-bar,
+  .archive .search-bar,
+  .single .navbar-collapse
+    display: block
+  .search-bar
+    margin-left: 2rem
+  .search .search-bar
+    margin-left: 0
+
+@media (min-width: $screen-lg)
+  .c-frm.responsive
+    border-radius: 10rem
+    padding: 0.563rem 1.125rem
+  .c-btn.toggle
+    padding: 0.438rem
+
+@media (min-width: $screen-lg)
+  .navbar-header,
+  .navbar-nav
+    min-height: 4rem
+  .navbar-collapse
+    margin-left: auto
+  .navbar-nav li
+    margin-left: 2rem
+
+@media (min-width: $screen-lg)
+  .search .navbar-header .block:first-child
+    display: block
+  .navbar-header .block:first-child,
+  .navbar-header .block:last-child
+    display: none
+
+@media (min-width: $screen-lg)
+  .navbar-header .block:first-child
+    flex-grow: 0
+  .navbar-header .block:nth-child(2)
+    margin-left: 2rem
+  .navbar-header .block:nth-child(2).logo
+    margin-left: 0px
+
+@media (min-width: $screen-lg)
+  .navbar-header .block:first-child img,
+  .navbar-header .block:nth-child(2) img
+    height: 2.5rem
+
+@media (max-width: $screen-lg)
+  .navbar-nav li a
+    align-items: center
+    border: 1px solid $elevated-separator
+    border-radius: 10rem
+    color: $primary-text
+    cursor: pointer
+    display: inline-flex
+    font-size: 0.875rem
+    font-weight: 400
+    justify-content: center
+    line-height: 1.25rem
+    padding: 0.313rem 1rem
+    text-align: center
+    user-select: none
+    white-space: nowrap
+  .navbar-nav li a:hover
+    background-color: rgb(240, 253, 244)
+    border-color: rgb(34, 197, 94)
+    color: rgb(22, 163, 74)
+  .navbar-collapse
+    overflow-x: scroll
+  .search .search-bar
+    width: 100%
+  .search .navbar-header .block:last-child
+    margin-left: 0.75rem
