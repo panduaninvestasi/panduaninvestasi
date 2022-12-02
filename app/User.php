@@ -35,6 +35,16 @@ class User extends Authenticatable
     }
 
     /**
+     * User has many post
+     *
+     * @return array
+     */
+    public function posts()
+    {
+        return $this->hasMany('App\Post', 'created_by');
+    }
+
+    /**
      * Indicates if the IDs are auto-incrementing.
      *
      * @var bool
