@@ -5,10 +5,41 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
     use Notifiable;
+
+    /**
+     * The "booting" function of model
+     *
+     * @return void
+     */
+    protected static function boot() {
+        parent::boot();
+        static::creating(function ($model) {
+            $model->id = (string) Str::uuid();
+        });
+    }
+
+    /**
+     * Hash password before save to database
+     *
+     * @return void
+     */
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = Hash::make($value);
+    }
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
 
     /**
      * The attributes that are mass assignable.
