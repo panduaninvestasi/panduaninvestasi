@@ -17,11 +17,11 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id', 20);
             $table->string('slug', 190)->index('slug');
             $table->string('title', 200);
-            $table->string('description', 200);
-            $table->string('keywords', 200);
+            $table->string('description', 200)->default('Website belajar Investasi Saham dan tips berinvestasi saham bagi pemula');
+            $table->string('keywords', 200)->default('belajar investasi, belajar saham, investasi, saham, investasi saham, investor saham');
             $table->longText('content');
             $table->string('status', 20)->default('draft');
-            $table->string('type', 20);
+            $table->string('type', 20)->default('post');
             $table->char('created_by', 36)->index('created_by');
             $table->timestamps();
             $table->index(['type','status','id'], 'type_status');
