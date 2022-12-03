@@ -9,8 +9,40 @@ type Query {
 }
 
 type Mutation {
-  createUser(name: String!, email: String!, password: String!): User! @create
-  updateUser(id: ID!, name: String, email: String): User! @update
+  createUser(
+    name: String!,
+    email: String!,
+    password: String!
+  ): User! @create
+
+  updateUser(
+    id: ID!,
+    name: String,
+    email: String
+  ): User! @update
+
+  createPost(
+    slug: String!,
+    title: String!,
+    description: String,
+    keywords: String,
+    content: String!,
+    status: String,
+    type: String @rules(apply: ["required", "in:post,page"]),
+    created_by: String @rules(apply: ["required", "uuid"])
+  ): Post! @create
+
+  updatePost(
+    id: ID!,
+    slug: String!,
+    title: String!,
+    description: String,
+    keywords: String,
+    content: String!,
+    status: String,
+    type: String!,
+    created_by: String @rules(apply: ["required", "uuid"])
+  ): Post! @update
 }
 
 type User {
@@ -30,7 +62,7 @@ type Post {
     description: String
     keywords: String
     content: String!
-    status: String!
+    status: String
     type: String!
     author: User! @belongsTo
     created_at: DateTime!
