@@ -27,7 +27,7 @@ type Mutation {
     description: String,
     keywords: String,
     content: String!,
-    status: String,
+    status: String @rules(apply: ["in:draft,publish"]),
     type: String @rules(apply: ["required", "in:post,page"]),
     created_by: String @rules(apply: ["required", "uuid"])
   ): Post! @create
@@ -39,8 +39,8 @@ type Mutation {
     description: String,
     keywords: String,
     content: String!,
-    status: String,
-    type: String!,
+    status: String @rules(apply: ["in:draft,publish"]),
+    type: String @rules(apply: ["required", "in:post,page"]),
     created_by: String @rules(apply: ["required", "uuid"])
   ): Post! @update
 }
