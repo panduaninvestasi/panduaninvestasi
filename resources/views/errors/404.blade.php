@@ -32,14 +32,14 @@
 .ibqMvn {
   margin-top: 1.25rem;
   font-size: 14px;
-  color: rgb(153, 153, 153);
+  color: rgb(142, 142, 142);
   line-height: 1.5;
 }
 
 .efafss {
   font-size: 1.25rem;
   font-weight: 700;
-  color: rgb(51, 51, 51);
+  color: rgb(38, 38, 38);
   text-align: center;
 }
 
