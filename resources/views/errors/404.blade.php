@@ -37,18 +37,20 @@
 }
 
 .efafss {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: rgb(51, 51, 51);
+  text-align: center;
 }
 
 @media screen and (min-width:1024px) {
   .efafss {
-    font-size: 1.25rem;
+    font-size: 1.50rem;
   }
 }
 
 .dBHYrA {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   text-align: center;
 }
 
@@ -121,7 +123,7 @@ body {
         <div class="sc-dkzDqf ibqMvn">
           <div class="sc-hKMtZM efafss">Halaman tidak di temukan</div>
           <div class="sc-eCYdqJ dBHYrA">
-            <a href="/" class="sc-jSMfEi AWojq">Kembali</a>
+            Coba dengan keyword lain atau <a href="/" class="sc-jSMfEi AWojq">Kembali</a>
           </div>
         </div>
       </div>
