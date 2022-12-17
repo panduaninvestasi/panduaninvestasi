@@ -21,7 +21,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100vh;
+  height: 83vh;
 }
 
 .ccbMSh {
