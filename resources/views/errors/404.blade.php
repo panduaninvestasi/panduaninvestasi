@@ -25,7 +25,7 @@
 }
 
 .ccbMSh {
-  max-width: 100vh;
+  max-width: 100%;
   height: auto;
 }
 
