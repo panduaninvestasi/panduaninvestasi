@@ -25,6 +25,16 @@ class User extends Authenticatable
     }
 
     /**
+     * Gravatar
+     *
+     * @return
+     */
+    public function setAvatarAttribute($value)
+    {
+        $this->attributes['avatar'] = "https://www.gravatar.com/avatar/" . md5(strtolower($value));
+    }
+
+    /**
      * Hash password before save to database
      *
      * @return void
@@ -57,7 +67,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'avatar', 'password',
     ];
 
     /**
